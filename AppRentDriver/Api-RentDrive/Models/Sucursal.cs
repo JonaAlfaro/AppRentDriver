@@ -14,5 +14,6 @@ namespace Api_RentDrive.Models
         public string Ciudad { get; set; }
 
         public virtual ICollection<Reserva> Reserva { get; set; }
+        public virtual ICollection<Automovil> Automovil { get; set; }
     }
 }

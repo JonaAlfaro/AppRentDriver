@@ -13,5 +13,8 @@ namespace Api_RentDrive.Models
         public string Email { get; set; }
         public string Ciudad { get; set; }
         public string Estado { get; set; }
+        
+        public virtual ICollection<Automovil> Automovil { get; set; }
+
     }
 }

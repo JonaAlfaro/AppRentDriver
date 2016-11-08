@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -18,9 +20,9 @@ namespace Api_RentDrive.Models
         public DbSet<Reserva> Reservaciones { get; set; }
         public DbSet<Sucursal> Sucursales { get; set; }
 
-        public override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConventions>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }
